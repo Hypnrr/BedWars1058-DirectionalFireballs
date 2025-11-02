@@ -10,9 +10,9 @@ Custom fireball handling designed by **Hypnr** for competitive BedWars1058 netwo
 
 ## Installation & Compatibility
 1. Install **BedWars1058** (tested on API 25.2) on a Spigot/Paper 1.8.8 network.
-2. Drop `BedWars1058-DirectionalFBAddon-1.4.2.jar` into `/plugins`.
+2. Drop `DirectionalFBAddon-1.4.2-shaded.jar` into `/plugins`.
 3. Restart or reload the server.
-4. Edit `plugins/BedWars1058-DirectionalFBs/config.yml` to match your ladder or tournament rules.
+4. Edit `plugins/BedWars1058-DirectionalFBAddon/config.yml` to match your ladder or tournament rules.
 
 ## Commands & Permissions
 | Command | Description | Permission |
@@ -41,14 +41,14 @@ git clone https://github.com/hypnr/BedWars1058-DirectionalFBAddon.git
 cd BedWars1058-DirectionalFBAddon
 mvn clean package
 ```
+The shaded artifact is published to `target/DirectionalFBAddon-1.4.2-shaded.jar`.
 
 ## Support & Credits
 - Plugin author: **Hypnr**
 - Core game: BedWars1058 by Andrei1058
-- Tested against Spigot/Paper 1.8.8 with BedWars1058 API 23.12.1-SNAPSHOT
+- Tested against Spigot/Paper 1.8.8 with BedWars1058 API 25.2
 
 Commercial licensing, bundle requests, or private support can be arranged directly with Hypnr.
 
 ## License
 Released under the **MIT License**. See `LICENSE` for full terms.
-
