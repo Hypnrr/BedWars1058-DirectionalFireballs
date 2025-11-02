@@ -1,0 +1,16 @@
+fireball:
+  explosion-size: 3.0
+  make-fire: true
+  min-horizontal: 0.15
+  self:
+    enabled: true
+    horizontal: 1.2
+    vertical: 1.2
+    max-distance: 1.6
+    angle:
+      pitch-threshold: 45.0          # look down at least this much to count as self jump
+      front-cos-threshold: 0.3        # if explosion is not sufficiently in front, treat as self jump
+    y-under-threshold: 0.6            # if you are this much above the explosion, treat as self jump
+  side:
+    horizontal: 1.1
+    vertical: 0.3

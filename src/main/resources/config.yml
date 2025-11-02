@@ -1,0 +1,48 @@
+#
+# Directional Fireball Suite by Hypnr 
+# -------------------------------------------------------
+# Tweak these values to shape knockback behaviour. Reload safely with /fbaddon reload.
+# All distances are in blocks, speeds in blocks/tick, and angles in degrees unless stated.
+
+fireball:
+  explosion-size: 3.0            # Default blaze fireball radius. Keep between 2.5-4.0 for best results.
+  make-fire: true                # Drop temporary cosmetic fire on impact when enabled in arenas.
+  min-horizontal: 0.15           # Lowest horizontal multiplier applied after blending to avoid zeroing small nudges.
+
+  throw:
+    enabled: true
+    consume-item: true
+    speed: 3.0                   # Fireball projectile launch speed multiplier.
+    cooldown-ticks: 15           # Delay (in ticks) between manual throws to prevent spam.
+    sound-enabled: true          # Optional: play configured sound on throw (requires server-side support).
+    sound-volume: 1.0            # Volume for the throw sound when enabled.
+    sound-pitch: 1.2             # Pitch for the throw sound when enabled.
+
+  self:
+    enabled: true
+    horizontal: 1.15             # Baseline horizontal strength for straight self jumps before blending.
+    vertical: 1.0                # Vertical velocity applied on ideal self fireball jumps.
+    max-distance: 1.6            # Maximum distance from blast centre to qualify as a self jump.
+    angle:
+      pitch-threshold: 45.0      # Look at least this far downwards to be considered a self jump.
+      front-cos-threshold: 0.3    # Dot threshold: smaller values favour self jumps when blast is front-facing.
+    zero-horizontal:
+      pitch-threshold: 75.0      # Looking nearly straight down triggers vertical-only boosts when stationary.
+      max-distance: 1.0          # Self blast must be within this distance for zero horizontal to trigger.
+      movement-threshold: 0.05   # Horizontal velocity below this counts as "not moving" for vertical-only jumps.
+    y-under-threshold: 0.6       # If the explosion is this far below the player, bias towards self vertical boosts.
+
+  side:
+    horizontal: 1.15             # Default sideways push when the blast is beside or behind the player.
+    vertical: 0.25               # Upwards motion for pure side hits (keep low for stability).
+    front-cos-threshold: 0.5     # Above this, the strike is treated as primarily in front of the player.
+    semi:
+      pitch-min: 20.0            # Minimum pitch (abs) to blend between side and self responses.
+      pitch-max: 40.0            # Maximum pitch (abs) to keep blending in the semi-side zone.
+      horizontal: 1.1            # Horizontal scaling while in semi-side region.
+      vertical: 0.5              # Vertical scaling while in semi-side region.
+    self:
+      pitch-max: 15.0            # Maximum pitch (abs) to treat nearby forward hits as side-self.
+      front-cos-threshold: 0.6   # Require tighter forward alignment for side-self classification.
+      horizontal: 1.1            # Horizontal strength for forward-facing side hits.
+      vertical: 0.25             # Vertical strength for forward-facing side hits.

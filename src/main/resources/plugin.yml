@@ -1,0 +1,22 @@
+name: BedWars1058-DirectionalFBs
+version: ${project.version}
+main: xyz.hypnr.fbaddon2.DirectionalFBsPlugin
+author: Hypnr
+description: Fully directional fireball knockback suite for BedWars1058 by Hypnr
+softdepend: [BedWars1058, BedWars2023]
+
+commands:
+  fbaddon:
+    description: Manage DirectionalFBAddon
+    usage: /<command> <reload|enable|disable|status|help>
+    permission: fbaddon.admin
+    aliases: [fb]
+  fbaddons:
+    description: Manage BedWars1058-DirectionalFBs
+    usage: /<command> <reload|enable|disable|status|help>
+    permission: fbaddon.admin
+
+permissions:
+  fbaddon.admin:
+    description: Allows managing DirectionalFBAddon
+    default: op
