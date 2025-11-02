@@ -12,6 +12,20 @@
     <name>BedWars1058-DirectionalFBAddon</name>
     <description>Directional fireball knockback addon for BedWars1058</description>
 
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/Hypnrr/BedWars1058-DirectionalFireballs</url>
+        <connection>scm:git:https://github.com/Hypnrr/BedWars1058-DirectionalFireballs.git</connection>
+        <developerConnection>scm:git:git@github.com:Hypnrr/BedWars1058-DirectionalFireballs.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -81,4 +95,12 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/Hypnrr/BedWars1058-DirectionalFireballs</url>
+        </repository>
+    </distributionManagement>
 </project>
